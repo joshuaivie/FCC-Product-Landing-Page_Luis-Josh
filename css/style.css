@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,12 @@ body {
   font-size: 12pt;
 }
 
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 header {
   position: fixed;
   display: flex;
@@ -20,6 +27,8 @@ header {
   height: 75px;
   padding: 0 20px;
   top: 0;
+  background: #eee;
+  z-index: 100;
 
 }
 
@@ -47,7 +56,7 @@ main {
 
 }
 
-#form{
+#form {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -57,42 +66,121 @@ main {
   white-space: nowrap;
   font-size: 12px;
 }
-.form-child{
+
+.form-child {
   margin: 10px 0px;
 }
-.products div{
+
+.products {
+  display: flex;
+  justify-content: center;
+}
+
+.products div {
   border: 1px solid black;
   width: 313px;
   margin: 10px;
 }
-.products .title{
+
+.products .title {
   background-color: rgb(221, 221, 221);
   text-transform: uppercase;
   font-weight: 700;
   padding: 15px;
   font-family: "Lato", sans-serif;
 }
-.products ol{
+
+.products ol {
   list-style-type: none;
 }
-.products li{
+
+.products li {
   margin: 15px 0px;
 }
-.btn{
+
+
+@media only screen and (max-width: 720px) {
+  .products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.btn {
   background-color: #f1c40f;
   padding: 0 20px;
   font-weight: 900;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: orange;
 }
-.products{
-  display: flex;
-  justify-content: center;
-}
-h2{
+
+h2 {
   margin: 15px 0;
 }
+
 #hello-world {
   display: none;
+}
+
+section {
+  margin-top: 70px;
+}
+
+.features .grid {
+  display: flex;
+}
+
+.features .grid .icon {
+  height: 125px;
+  width: 20vw;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px !important;
+}
+
+.features .grid .desc {
+  text-align: left;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .grid .desc h2 {
+  margin: 0;
+}
+
+footer {
+  margin-top: 70px;
+  padding: 20px;
+  background-color: #ddd;
+  display: block;
+}
+
+footer .footer-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .footer-nav li {
+  list-style-type: none;
+  font-size: 12pt;
+}
+
+footer .footer-nav a {
+  color: #000;
+  text-decoration: none;
+  padding: 0 0 0 15px;
+}
+
+footer .copyright {
+  display: flex;
+  font-size: 10pt;
+  margin-top: 5px;
+  justify-content: flex-end;
 }
